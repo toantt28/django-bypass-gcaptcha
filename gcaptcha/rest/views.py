@@ -56,7 +56,7 @@ class Test(APIView):
         element = shadow_section.find_element_by_tag_name('input')
         driver.execute_script("document.getElementById('input').removeAttribute('hidden')")
 
-        randNum = random.randint(1, 18)
+        randNum = random.randint(1, 100)
         randImg = '{}.png'.format(randNum)
         element.send_keys(
             os.path.join(
