@@ -126,7 +126,7 @@ class Test(APIView):
                 delay()
             except Exception as e:
                 # pass
-                print(e)
+                print('[Exception]', e)
                 driver.save_screenshot(os.path.join(
                     os.getcwd(),
                     'gcaptcha',
@@ -137,7 +137,6 @@ class Test(APIView):
                 flag = False
                 driver.switch_to.default_content()
                 delay()
-
         # HERE IS success image
         token = "Google mark as spam. Please try again later."
         for request in driver.requests:
