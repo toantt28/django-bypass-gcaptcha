@@ -127,6 +127,13 @@ class Test(APIView):
             except Exception as e:
                 # pass
                 print(e)
+                driver.save_screenshot(os.path.join(
+                    os.getcwd(),
+                    'gcaptcha',
+                    'rest',
+                    'screenshots',
+                    'error.png'
+                ))
                 flag = False
                 driver.switch_to.default_content()
                 delay()
